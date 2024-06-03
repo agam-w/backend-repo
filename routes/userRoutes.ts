@@ -1,13 +1,9 @@
 import express from "express";
+import { fetchUserData, updateUserData } from "../controller/api";
 
 const router = express.Router();
 
-router.get("/fetch-user-data", (req, res) => {
-  res.send("fetch user data");
-});
-
-router.post("/update-user-data", (req, res) => {
-  res.send("update user data");
-});
+router.get("/fetch-user-data", fetchUserData);
+router.post("/update-user-data", updateUserData);
 
 export default router;
